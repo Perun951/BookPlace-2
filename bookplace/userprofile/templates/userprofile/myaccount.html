@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title %}
+Contul meu
+{% endblock %}
+
+{% block content %}
+<div class="card mx-auto rounded-4 shadow p-3 mb-5 bg-white rounded border-0" style="background-color: white; width: 95%; height: 90%; margin-bottom: 5%;  margin-top: 80px; ">
+    <h5 class="card-title mx-auto" style="margin-top: 50px;"><font size="6">Contul meu:</font></h5>
+    <div class="d-flex justify-content-around flex-wrap gap-3 align-items-center " style="margin-bottom: 5%;margin-left: 2%;margin-right: 2%;">
+        <button type="button" class="btn btn-danger" style="align-self: flex-end;">
+            <a href="{% url 'logout' %}" style="text-decoration: none; color: white;">Deconectare</a>
+        </button>
+    </div>
+</div>
+{% endblock %}

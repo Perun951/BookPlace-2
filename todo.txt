@@ -1,0 +1,3 @@
+-repair thumbnails
+-fix the search
+-search filter
