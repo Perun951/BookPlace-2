@@ -1,3 +1,8 @@
--repair thumbnails
+-complete on every page thumbnails
 -search filter
 -sign/login in form
+-Q&A page
+-live chat
+-carusel linkuri pt pagini diferite: 
+    -recomandari
+    -most downloaded

@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.utils.text import slugify
@@ -90,6 +90,7 @@ def edit_product(request, pk):
         'form': form
     })
 
+    
 @login_required
 def delete_product(request, pk):
     product = Product.objects.filter(user=request.user).get(pk=pk)
@@ -122,3 +123,4 @@ def signup(request):
     return render(request, 'userprofile/signup.html',{
         'form': form
     })
+
