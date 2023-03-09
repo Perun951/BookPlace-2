@@ -12,6 +12,20 @@ def recomandari(request):
         'products': products,
     })
 
+def nr_rev(request):
+    products = Product.objects.filter(status=Product.ACTIVE)
+
+    return render(request, 'store/nr_rev.html', {
+        'products': products,
+    })
+
+def nr_down(request):
+    products = Product.objects.filter(status=Product.ACTIVE)
+
+    return render(request, 'store/nr_down.html', {
+        'products': products,
+    })
+
 def validate_file_extension(value):
     if not value.name.endswith('.pdf'):
         raise ValidationError(u'Error message')
