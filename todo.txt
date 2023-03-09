@@ -1,9 +1,10 @@
--complete on every page thumbnails
+-DONE complete on every page thumbnails
 -DONE carusel linkuri pt pagini diferite: 
-    -recomandari
+    -recomandari(if true->recom.html)
     -most downloaded
     -nr reviewuri
 -search filter
+-downloads for user(p7St)
 -sign/login in form
 -Q&A page
 -request form

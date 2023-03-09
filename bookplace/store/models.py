@@ -43,6 +43,7 @@ class Product(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(max_length=50)
     status = models.CharField(max_length=50, choices=STATUS_CHOICES, default=ACTIVE)
+    recomanda = models.BooleanField(default=False)
 
     class Meta:
         ordering = ('-created_at',)
@@ -60,7 +61,7 @@ class Product(models.Model):
 
                 return self.thumbnail.url
             else:
-                return 'media/photo_2023-02-08_13-03-17.jpg'
+                return '/static/images/photo_2023-02-08_13-03-17.jpg'
 
     def make_thumbnail(self,image,size=(350,350)):
         img = Image.open(image)

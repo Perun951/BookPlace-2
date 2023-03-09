@@ -5,7 +5,12 @@ from django.core.paginator import Paginator
 
 from .models import Product, Category, Review
 
+def recomandari(request):
+    products = Product.objects.filter(status=Product.ACTIVE)
 
+    return render(request, 'store/partials/recom.html', {
+        'products': products,
+    })
 
 def validate_file_extension(value):
     if not value.name.endswith('.pdf'):

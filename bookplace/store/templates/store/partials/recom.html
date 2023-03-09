@@ -1,6 +1,21 @@
-<div class="d-flex justify-content-center flex-row flex-wrap gap-4  " style="margin-top: 50px;margin-bottom: 5%;margin-left: 2%;margin-right: 2%;">
-    {% for product in products_list %}
-        <div style="margin-bottom: -50px;" align="center"> 
+{% extends 'core/base.html' %}
+
+{% block title %}
+Recomandari
+{% endblock %}
+
+{% block content %}
+<div class="bg-success rounded-bottom-5" style="width: 100vw;margin-top: 50px;height: 101vh;">
+  <div style="height: 100vh;width: 100vw;">
+    {% include 'store/partials/carusel_r.html' %}
+  </div>
+</div>
+<div class="card mx-auto rounded-4 shadow p-3 mb-5 mt-5 bg-white rounded border-0" style="background-color: white; width: 95%; height: 90%; margin-bottom: 5%;">
+  <h1 class="card-title mx-auto">Recomandarile noastre:</h1>
+  <div class="d-flex justify-content-center flex-row flex-wrap gap-4  " style="margin-top: 50px;margin-bottom: 5%;margin-left: 2%;margin-right: 2%;">
+    {% if request.products.product.recomanda %}
+        {% for product in products %}
+            <div style="margin-bottom: -50px;" align="center"> 
                 <div class="card shadow p-3 mb-5 bg-white border-0 rounded-4" style="width: 400px; height: 700px;">
                     <div class="image p-1"> 
                         <a href="{% url 'product_detail'  product.category.slug product.slug %}"> 
@@ -33,6 +48,10 @@
                         </div>
                     </div>
                 </div>
-        </div>
-    {% endfor %}
+            </div>
+        {% endfor %}
+    {% endif %}
 </div>
+</div>
+
+{% endblock %}
