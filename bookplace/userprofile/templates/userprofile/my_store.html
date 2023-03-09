@@ -29,7 +29,7 @@ Magazinul meu
                     <div class="card shadow p-3 mb-5 bg-white rounded border-0 rounded-4" style="max-width: 400px ;min-width: 400px; min-height: 700px;max-height: 700px;" >
                         <a href="{% url 'edit_product' product.id %}">
                             <div class="image p-1">  
-                                <img class="rounded-4" id="corner" src="{% if product.image %} {{product.image.url}} {% else %} ../../../../../media/photo_2023-02-08_13-03-17.jpg {% endif %}" width="350px" height="350px" alt="Image of {{ product.title }}">
+                                <img class="rounded-4" id="corner" src="{{ product.get_thumbnail }}" width="350px" height="350px" alt="Image of {{ product.title }}">
                             </div>
                         </a>
                         <div class="card-body " style="background-color: white;">  

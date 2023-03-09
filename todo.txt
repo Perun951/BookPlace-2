@@ -1,8 +1,11 @@
 -complete on every page thumbnails
+-DONE carusel linkuri pt pagini diferite: 
+    -recomandari
+    -most downloaded
+    -nr reviewuri
 -search filter
 -sign/login in form
 -Q&A page
--live chat
--carusel linkuri pt pagini diferite: 
-    -recomandari
-    -most downloaded
+-request form
+-live support chat
+
