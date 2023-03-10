@@ -9,7 +9,7 @@ from store.models import Product
 
 def frontpage(request):
     products = Product.objects.filter(status=Product.ACTIVE)
-    p= Paginator(Product.objects.all(), 8)
+    p= Paginator(Product.objects.filter(status=Product.ACTIVE), 8)
     page = request.GET.get('page')
     products_list = p.get_page(page)
     nums = "a" * products_list.paginator.num_pages

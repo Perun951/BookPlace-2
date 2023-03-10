@@ -11,7 +11,7 @@ from .models import Userprofile
 from store.models import Product
 
 from store.forms import ProductForm
-from store.models import Product
+from store.models import Product, Category
 
 def publisher_detail(request, pk):
     user = User.objects.get(pk=pk)
@@ -51,17 +51,19 @@ def add_product(request):
 
         if form.is_valid():
             title = request.POST.get('title')
+            
             product = form.save(commit=False)
             product.user = request.user
             product.slug = slugify(title)
             product.save()
-            messages.success(request, 'Caretea a fost adaugata!')
+            messages.success(request, 'Cartea a fost adaugata!')
 
             return redirect('my_store')
     else:
         form = ProductForm()
 
     form = ProductForm()
+
     return render(request, 'userprofile/product_form.html', {
         'title': 'Adauga carte',
         'form': form
