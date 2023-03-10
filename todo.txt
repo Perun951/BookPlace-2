@@ -1,6 +1,7 @@
 -DONE complete on every page thumbnails
 -DONE carusel linkuri pt pagini diferite: 
     -recomandari(if true->recom.html)
+    -cele mai apreciate
     -most downloaded
     -nr reviewuri
 -search filter
@@ -9,4 +10,6 @@
 -Q&A page
 -request form
 -live support chat
+
+
 

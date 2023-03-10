@@ -5,6 +5,7 @@ from django.utils import timezone
 
 class Userprofile(models.Model):
     user = models.OneToOneField(User, related_name='userprofile', on_delete=models.CASCADE)
+    verificat = models.BooleanField(default=False)
 
     def __str__(self):
         return self.user.username

@@ -83,6 +83,10 @@ class Product(models.Model):
             return reviews_total / self.reviews.count()
 
         return 0
+    
+    def num_of_reviews(self):
+        return Review.objects.filter(product=self).count()
+        # object-> produs;
 
 class Review(models.Model):
     product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
