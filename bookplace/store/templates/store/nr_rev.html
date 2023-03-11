@@ -7,11 +7,11 @@ Recomandari
 {% block content %}
 <div class="bg-success rounded-bottom-5" style="width: 100vw;margin-top: 50px;height: 101vh;">
   <div style="height: 100vh;width: 100vw;">
-    {% include 'store/partials/carusel_r.html' %}
+    {% include 'store/partials/carusel_rv.html' %}
   </div>
 </div>
 <div class="card mx-auto rounded-4 shadow p-3 mb-5 mt-5 bg-white rounded border-0" style="background-color: white; width: 95%; height: 90%; margin-bottom: 5%;">
-  <h1 class="card-title mx-auto">Recomandarile noastre:</h1>
+  <h1 class="card-title mx-auto">Carti dupa numarul de recenzi:</h1>
   <div class="d-flex justify-content-center flex-row flex-wrap gap-4  " style="margin-top: 50px;margin-bottom: 5%;margin-left: 2%;margin-right: 2%;">
     {% if request.products.product.recomanda %}
         {% for product in products %}

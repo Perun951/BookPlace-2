@@ -26,6 +26,13 @@ def nr_down(request):
         'products': products,
     })
 
+def nota(request):
+    products = Product.objects.filter(status=Product.ACTIVE)
+
+    return render(request, 'store/nota.html', {
+        'products': products,
+    })
+
 def validate_file_extension(value):
     if not value.name.endswith('.pdf'):
         raise ValidationError(u'Error message')

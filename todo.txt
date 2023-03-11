@@ -1,6 +1,6 @@
 -DONE complete on every page thumbnails
 -DONE carusel linkuri pt pagini diferite: 
-    -recomandari(if true->recom.html)
+    -DONE recomandari(if true->recom.html)
     -cele mai apreciate
     -most downloaded
     -nr reviewuri
